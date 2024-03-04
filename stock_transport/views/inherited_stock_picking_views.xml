@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- To add few new fields in stock picking tree view -->
+    <record id="inherited_stock_picking_views" model="ir.ui.view">
+        <field name="name">inherited.stock.picking.view.tree</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <tree position="inside">
+                <field name="picking_weight" />
+                <field name="picking_volume" />
+            </tree>
+        </field>
+    </record>
+</odoo>
